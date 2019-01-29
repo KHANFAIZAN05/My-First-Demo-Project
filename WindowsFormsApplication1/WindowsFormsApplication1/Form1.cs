@@ -16,5 +16,17 @@ namespace WindowsFormsApplication1
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                MessageBox.Show("Hello From Khan Faizan", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
