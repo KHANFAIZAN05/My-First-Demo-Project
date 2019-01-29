@@ -21,8 +21,11 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                MessageBox.Show("Hello From Khan Faizan", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
+               DialogResult = MessageBox.Show("Hello From Khan Faizan", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(DialogResult == DialogResult.OK)
+                {
+                    DialogResult = MessageBox.Show("Closing Bye", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
